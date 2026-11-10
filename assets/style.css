@@ -210,3 +210,8 @@ main > .vtimeline { max-width: none; }
 .t-err { background: var(--bad-bg); color: var(--bad); }
 .legend-tags { display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; color: var(--muted); align-items: center; }
 .todo.inline { display: inline; padding: 1px 6px; font-size: 13px; border-width: 1px; }
+
+/* Long URLs in references and tables wrap on phones instead of widening the page */
+.refs { padding-left: 20px; }
+.refs li { margin-bottom: 10px; overflow-wrap: anywhere; }
+td a { overflow-wrap: anywhere; }
