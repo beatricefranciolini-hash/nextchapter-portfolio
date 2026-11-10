@@ -13,24 +13,19 @@
 <h2>Five findings</h2>
 
 <h3>1 · Where the money goes</h3>
-<figure class="wide"><img src="assets/img/chart-cost-by-feature.png" alt="Horizontal stacked bar chart of AI cost by feature, split into demo and development: compass.offers $3.69, compass.paths $3.00, opportunity.nightly $1.49, compass.chat $1.40, compass.plan $0.69, then smaller features; development tests dominate most bars." loading="lazy"></figure>
-<p>Offer search (web search) and career paths (the most capable model) cost most; I repeated both while tuning prompts.</p>
+<figure class="wide"><img src="assets/img/chart-cost-by-feature.png" alt="Horizontal stacked bar chart of AI cost by feature, split into demo and development: compass.offers $3.69, compass.paths $3.00, opportunity.nightly $1.49, compass.chat $1.40, compass.plan $0.69, then smaller features; development tests dominate most bars." loading="lazy"><figcaption>Offer search (web search) and career paths (the most capable model) cost most; I repeated both while tuning prompts.</figcaption></figure>
 
 <h3>2 · Cost per person</h3>
-<figure class="wide"><img src="assets/img/chart-path-cost.png" alt="Bar chart of Career Compass cost for the four users who completed a path: U15 $1.03, U16 $1.16, U02 $1.38, U03 $3.75; mean $1.83." loading="lazy"></figure>
-<p>A complete path costs $1.83 on average ($1.09 for demo users); then about $0.14 per active month. This drives the <a href="business.html">pricing</a>.</p>
+<figure class="wide"><img src="assets/img/chart-path-cost.png" alt="Bar chart of Career Compass cost for the four users who completed a path: U15 $1.03, U16 $1.16, U02 $1.38, U03 $3.75; mean $1.83." loading="lazy"><figcaption>A complete path costs $1.83 on average ($1.09 for demo users); then about $0.14 per active month. This drives the <a href="business.html">pricing</a>.</figcaption></figure>
 
 <h3>3 · The shared archive pays for itself</h3>
-<figure class="wide"><img src="assets/img/chart-cache.png" alt="Bar chart: 136 nightly path searches served from the archive (89%) against 16 real searches." loading="lazy"></figure>
-<p>Same role, same area, within three days: the search is reused. 89% were, saving about $12.66 against $1.49 spent.</p>
+<figure class="wide"><img src="assets/img/chart-cache.png" alt="Bar chart: 136 nightly path searches served from the archive (89%) against 16 real searches." loading="lazy"><figcaption>Same role, same area, within three days: the search is reused. 89% were, saving about $12.66 against $1.49 spent.</figcaption></figure>
 
 <h3>4 · Web search fails in Italy</h3>
-<figure class="wide"><img src="assets/img/chart-offers.png" alt="Stacked bar chart of verified offers by city and source: London 13 web and 8 Adzuna, Milano 2 web and 3 Adzuna, Other 3 and 2, Remote 3 web." loading="lazy"></figure>
-<p>London: 21 verified offers. Milan: 5, three from a short Adzuna trial. Hence: licence Adzuna before launching in Italy.</p>
+<figure class="wide"><img src="assets/img/chart-offers.png" alt="Stacked bar chart of verified offers by city and source: London 13 web and 8 Adzuna, Milano 2 web and 3 Adzuna, Other 3 and 2, Remote 3 web." loading="lazy"><figcaption>London: 21 verified offers. Milan: 5, three from a short Adzuna trial. Hence: licence Adzuna before launching in Italy.</figcaption></figure>
 
 <h3>5 · The 75 threshold</h3>
-<figure class="wide"><img src="assets/img/chart-fit.png" alt="Histogram of 30 fit scores from 45 to 100 with a dashed line at 75: 11 of 30 offers (37%) are at or above it." loading="lazy"></figure>
-<p>37% of offers score 75+ and become an action (43% at 70, 27% at 80): about one in three, enough without flooding.</p>
+<figure class="wide"><img src="assets/img/chart-fit.png" alt="Histogram of 30 fit scores from 45 to 100 with a dashed line at 75: 11 of 30 offers (37%) are at or above it." loading="lazy"><figcaption>37% of offers score 75+ and become an action (43% at 70, 27% at 80): about one in three, enough without flooding.</figcaption></figure>
 
 <h2 id="threshold">The 5-person threshold, in SQL</h2>
 <pre><code>when metric &lt;&gt; 'group' and (grp is null or grp &lt; 5)
