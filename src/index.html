@@ -1,0 +1,107 @@
+<!-- title: NextChapter · AI career-transition coach · Portfolio -->
+<!-- description: How I built NextChapter, an AI outplacement platform that companies give to the people leaving them: the user, the problem, my role and the AI's, data, business case and reflection. -->
+
+<!-- hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-brand">
+      <svg viewBox="0 0 100 100" width="56" height="56" aria-hidden="true"><path d="M6 4 Q2 2.6 2 7 L2 86 Q2 90 6 90 L54 90 Q58 90 58 86 L58 27 Q58 23.5 54.5 22 Z" fill="#ffffff"/><path d="M63 18 Q80 6 96 4 L96 86 Q80 84 63 90" fill="none" stroke="#57C0C7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Next<b>Chapter</b></span>
+    </p>
+    <h1>An AI outplacement platform: the company offers it, the person leaving uses it to find the next role.</h1>
+    <p class="hero-sub">Career paths from the CV, verified job offers every night, a tailored CV, interview practice and three actions a day. The company sees only group figures.</p>
+    <div class="actions">
+      <a class="btn btn-light" href="https://www.my-nextchapter.app" rel="noopener">Open the app ↗</a>
+      <a class="btn btn-outline" href="building.html">How I built it</a>
+    </div>
+    <ul class="badges" aria-label="Product facts">
+      <li>IT / EN</li><li>Installable on a phone</li><li>Invite-only access</li><li>Claude API at the core</li>
+    </ul>
+    <p class="hero-note">Portfolio for DSC502 Coding · private prototype with fictitious data; demo logins in the submission PDF.</p>
+  </div>
+</section>
+<!-- /hero -->
+
+<h2>What NextChapter does</h2>
+<p>Each feature is a Claude API call made by a server function and checked by code before the user sees it. Tap a screenshot to enlarge it.</p>
+
+<h3 class="group-title">For employees</h3>
+<div class="products">
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+    <h4>Career Compass</h4>
+    <p>CV → profile → questions → 3–5 paths with fit, sourced salary, gaps and plan; by chat or guided.</p>
+    <figure><img src="assets/img/prod-emp-compass.jpg" alt="Career Compass in English: two career paths side by side with fit 85/100 and 55/100, market salary 'data not available' explained, readiness, exposure to AI and main gaps." loading="lazy"></figure>
+  </article>
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/><path d="M8.5 11l2 2 3.5-4"/></svg></span>
+    <h4>Opportunity Engine</h4>
+    <p>Real offers verified every night, with fit score, reasons and gaps; save or dismiss.</p>
+    <figure><img src="assets/img/prod-emp-opportunities.jpg" alt="Opportunities page: new offers verified overnight, each with company and city, fit 62/100 with sub-scores for skills, path, preferences and level, and buttons Open the ad, Save, Dismiss." loading="lazy"></figure>
+  </article>
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 16h5"/></svg></span>
+    <h4>Application + Interview AI</h4>
+    <p>A tailored CV that invents nothing, PDF/Word export, ready messages, mock interviews with scores and tips.</p>
+    <figure><img src="assets/img/prod-emp-applications.jpg" alt="Applications page: one application in preparation, one sent with a follow-up reminder, one at interview stage with a date, and a box to practise a mock interview for the chosen path." loading="lazy"></figure>
+  </article>
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9l1.5 1.5L12 8M8 15l1.5 1.5L12 14M14 9.5h3M14 15.5h3"/></svg></span>
+    <h4>Transition Command Center</h4>
+    <p>Today's 3 actions, a light weekly plan, a private check-in, progress.</p>
+    <figure><img src="assets/img/prod-emp-command-center.jpg" alt="Command Center: Today shows one action, send the follow-up to a company, with Open messages, Done and Not now; This week shows three goals with progress 0 of 2, 0 of 2, 0 of 1." loading="lazy"></figure>
+  </article>
+</div>
+
+<h3 class="group-title">For companies</h3>
+<div class="products">
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5"/><path d="M16 8h5M18.5 5.5v5"/></svg></span>
+    <h4>Offboarding Command Center</h4>
+    <p>Transition programmes in three packages, personal invitation links.</p>
+    <figure><img src="assets/img/prod-co-programs.jpg" alt="Company Programmes page: an existing programme with 18 active and 1 not active, and a form to create a new programme choosing Essential 4 weeks, Standard 8 weeks or Extended 12 weeks." loading="lazy"></figure>
+  </article>
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+    <h4>Transition Outcomes</h4>
+    <p>Group KPIs, a summary for the board, a PDF report.</p>
+    <figure><img src="assets/img/prod-co-overview.jpg" alt="Company Overview: participation figures and group results such as people activated 15, active in the last 2 weeks 'at least 5', reached interview 6, re-employed 5." loading="lazy"></figure>
+  </article>
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01"/></svg></span>
+    <h4>Feedback surveys</h4>
+    <p>Week 2, week 6 and exit surveys, shown only as aggregated sentiment and themes.</p>
+    <figure><img src="assets/img/prod-co-experience.jpg" alt="Employee experience page: week 2 survey with 12 answers, average usefulness 4.0, confidence 3.5, recommend 7.9, tone of comments and recurring themes with 'fewer than 5' where counts are small." loading="lazy"></figure>
+  </article>
+  <article class="product">
+    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7 11l10-4M7 13l10 4"/></svg></span>
+    <h4>Workforce Intelligence</h4>
+    <p>Where people go and which skills transfer, across companies, anonymously.</p>
+    <figure><img src="assets/img/prod-co-workforce.jpg" alt="Workforce Intelligence: 27 people in programmes, 14 found a new job; where people go by role family; kind of change; skills that transfer; each figure covers at least 5 people from at least 3 companies." loading="lazy"></figure>
+  </article>
+</div>
+
+<div class="privacy">
+  <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+  <div>
+    <h3>Privacy by design</h3>
+    <p>The company sees only group figures about at least 5 people, never CVs, chats, check-ins or interviews. The rule runs in the database (<a href="data.html#threshold">how</a>).</p>
+  </div>
+</div>
+
+<h2>Key numbers</h2>
+<div class="tiles">
+  <div class="tile"><span class="num">$1.83</span><span class="lbl">AI cost of a complete career path</span></div>
+  <div class="tile"><span class="num">$0.14</span><span class="lbl">per active user per month</span></div>
+  <div class="tile"><span class="num">89%</span><span class="lbl">of job searches reused from a shared archive</span></div>
+  <div class="tile"><span class="num">2 vs 3</span><span class="lbl">verified Italian offers: web search vs Adzuna trial</span></div>
+  <div class="tile"><span class="num">37%</span><span class="lbl">of offers pass the 75/100 fit threshold</span></div>
+</div>
+<p class="small muted">From the app's log of 989 AI calls, analysed with SQL and pandas: <a href="data.html">data page</a> · <a href="analysis/index.html">full notebook</a>.</p>
+
+<div class="cards">
+  <a class="card" href="problem.html"><h3>Who is it for? →</h3></a>
+  <a class="card" href="building.html"><h3>My role and AI's →</h3></a>
+  <a class="card" href="business.html"><h3>Would someone pay? →</h3></a>
+  <a class="card" href="reflection.html"><h3>What I'd change →</h3></a>
+</div>
