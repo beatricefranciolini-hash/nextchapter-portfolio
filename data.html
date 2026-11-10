@@ -68,7 +68,7 @@ when metric &lt;&gt; 'group' and grp - v &lt; 5
 else jsonb_build_object('value', v)           -- safe: show the number</code></pre>
 <p>A published figure also changes only when the true value moves by 5 or more, so nobody can spot one person's change overnight. The notebook re-implements both rules in Python.</p>
 
-<p class="small muted">Limits: test and demo data, 16 users over 26 days, 4 complete paths, 30 scores. Orders of magnitude, not forecasts.</p>
+<p class="small muted">Limits: test and demo data, 16 users, 4 complete paths, 30 scores. Orders of magnitude, not forecasts.</p>
 </main>
 <footer class="foot">
   <div class="foot-inner">

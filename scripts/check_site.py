@@ -24,6 +24,20 @@ SENSITIVE = [
     (r"/Users/[A-Za-z]+", "local path"),
     (r"(?<![A-Za-z])\.env(\.local)?\b", ".env file"),
 ]
+MONTHS = "January|February|March|April|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+DATES = [
+    rf"\b\d{{1,2}}(?:–\d{{1,2}})?\s+(?:{MONTHS}|May)\b",
+    rf"\b(?:{MONTHS})\s+\d{{1,2}}\b",
+    rf"\b(?:January|February|March|April|June|July|August|September|October|November|December)\b",
+    r"\b\d{1,2}:\d{2}\b", r"\b\d{4}-\d{2}-\d{2}\b", r"\b\d{1,2}/\d{1,2}/\d{2,4}\b", r"\blast week\b",
+]
+
+
+def dates_in(text):
+    """Dates or times in visible text; Harvard "(Accessed: …)" dates are allowed."""
+    text = re.sub(r"\(Accessed: [^)]*\)", "", text)
+    text = re.sub(r"data:image/[a-z]+;base64,[A-Za-z0-9+/=]+", "", text)
+    return sorted({m.group(0) for p in DATES for m in re.finditer(p, text, re.I)})
 
 
 class Text(HTMLParser):
@@ -117,9 +131,15 @@ def main():
             if not target.exists():
                 problems.append(f"{slug}.html: broken link or image {link}")
         visible = re.sub(r"<[^>]+>", " ", html)
+        for d in dates_in(re.sub(r"<[^>]+>", " ", re.sub(r"<!--.*?-->", "", html, flags=re.S))):
+            problems.append(f"{slug}.html: date or time found ({d})")
         for pattern, label in SENSITIVE:
             for m in set(re.findall(pattern, visible)):
                 problems.append(f"{slug}.html: {label} found ({str(m)[:12]}…)")
+    nb = (ROOT / "analysis" / "index.html").read_text()
+    nb_text = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", nb, flags=re.S)
+    for d in dates_in(re.sub(r"<[^>]+>", " ", nb_text)):
+        problems.append(f"analysis/index.html: date or time found ({d})")
     print(f"{'TOTAL':12} {total:6} {total_struct:22} {total_marked:13}")
     print(f"Prose + drafts/to-dos: {total + total_marked} words · everything: {total + total_marked + total_struct} words")
     print(f"\nDRAFT sentences to rewrite: {len(all_drafts)}")
